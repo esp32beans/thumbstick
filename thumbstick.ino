@@ -98,7 +98,7 @@ void setup() {
   // wait until device mounted
   while( !TinyUSBDevice.mounted() ) delay(1);
 
-  while (!Serial) delay(1);
+  while (!Serial && millis() < 3000) delay(1);
   Serial.println();
   Serial.println("USB analog small joytick");
 }
